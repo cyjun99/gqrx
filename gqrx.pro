@@ -211,11 +211,14 @@ unix:!macx {
 
 macx {
     # macports
-    INCLUDEPATH += /opt/local/include
+    #INCLUDEPATH += /opt/local/include
+    # brew
+    INCLUDEPATH += /usr/local/include
+    LIBS += -L/usr/local/lib
 
     # local stuff
-    INCLUDEPATH += /Users/alexc/gqrx/runtime/include
-    LIBS += -L/opt/local/lib -L/Users/alexc/gqrx/runtime/lib
+    #INCLUDEPATH += /Users/alexc/gqrx/runtime/include
+    #LIBS += -L/opt/local/lib -L/Users/alexc/gqrx/runtime/lib
 
     LIBS += -lboost_system-mt -lboost_program_options-mt
     LIBS += -lgnuradio-runtime -lgnuradio-pmt -lgnuradio-audio -lgnuradio-analog
